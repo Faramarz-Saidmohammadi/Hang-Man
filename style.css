@@ -1,0 +1,132 @@
+:root{
+    --background-color: #34495e;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a{
+    color: inherit;
+}
+body{
+    background-color: var(--background-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    height: 80vh;
+    overflow: hidden;
+}
+.game-ground{
+    fill: transparent;
+    stroke-width: 5px;
+    stroke: #fff;
+    stroke-linecap: round;
+}
+
+.figure-part{
+    display: none;
+}
+
+h1{
+    margin: 20px 0 0 ;
+}
+
+.game-container{
+    padding: 20px 30px;
+    position: relative;
+    height: 500px;
+    width: 450px;
+}
+
+.game-container .wrong-letter-contianer{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    text-align: right;
+}
+
+.game-container .wrong-letter-contianer span{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.game-container .word-letter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+.game-container .word-letter-container .letter{
+    border-bottom: 2px solid #2957ed ;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #2957ed;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 10px 13px 3px rgba(0, 0, 0, 0.3);
+}
+
+.modal button{
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #2957ed;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.modal button:active{
+    transform: scale(0.98);
+}
+
+.modal button:focus{
+    outline: none;
+}
+
+.notification-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    bottom: -50px;
+    transition: 0.5s transform ease-in-out;
+}
+
+.notification-container.show{
+    transform: translateY(-50px);
+}
+
